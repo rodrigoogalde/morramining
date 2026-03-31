@@ -1,0 +1,124 @@
+/* ── Film Grain Overlay ── */
+.forged-grain {
+  position: relative;
+}
+
+.forged-grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* ── Staggered Word Animation (Hero) ── */
+@keyframes stagger-word {
+  0% {
+    opacity: 0;
+    transform: translateY(32px) rotateX(15deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+  }
+}
+
+.forged-word {
+  display: inline-block;
+  opacity: 0;
+  animation: stagger-word 0.7s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* ── Copper Line Draw ── */
+@keyframes copper-line-draw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.forged-line-draw {
+  transform-origin: left center;
+  transform: scaleX(0);
+  animation: copper-line-draw 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.forged-line-draw-delay {
+  animation-delay: 0.6s;
+}
+
+/* ── Section Reveal ── */
+@keyframes forged-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.forged-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.forged-reveal.in-view {
+  animation: forged-reveal 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.forged-reveal-stagger-1.in-view { animation-delay: 0.1s; }
+.forged-reveal-stagger-2.in-view { animation-delay: 0.2s; }
+.forged-reveal-stagger-3.in-view { animation-delay: 0.3s; }
+.forged-reveal-stagger-4.in-view { animation-delay: 0.4s; }
+.forged-reveal-stagger-5.in-view { animation-delay: 0.5s; }
+.forged-reveal-stagger-6.in-view { animation-delay: 0.6s; }
+
+/* ── Duotone Image Filter ── */
+.forged-duotone {
+  filter: grayscale(100%) contrast(1.1) brightness(0.9) sepia(20%);
+  mix-blend-mode: luminosity;
+}
+
+/* ── Copper Underline Hover ── */
+.forged-underline {
+  position: relative;
+}
+
+.forged-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-forged-copper);
+  transition: width 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.forged-underline:hover::after {
+  width: 100%;
+}
+
+/* ── Card Hover Border ── */
+.forged-card-hover {
+  border-top: 2px solid transparent;
+  transition: border-color 0.35s ease, background-color 0.35s ease;
+}
+
+.forged-card-hover:hover {
+  border-top-color: var(--color-forged-copper);
+}
+
+/* ── Scroll-linked Navbar ── */
+.forged-navbar-scrolled {
+  background-color: rgba(26, 26, 30, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}

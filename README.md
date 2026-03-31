@@ -1,36 +1,176 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Website Draft – Mining Company
 
-## Getting Started
+## Project Overview
 
-First, run the development server:
+The draft includes:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- General description of the project/company  
+- Services / products  
+- Value proposition  
+- Contact information  
+- (Any other relevant section you would like to include)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I remain attentive to your comments, suggestions, or any adjustments you consider necessary from a design or user experience perspective.  
+If you believe any content is missing or something could be presented better, I would be happy to review it together.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Thank you very much for your help with this.  
+Pending items include the photos and the improved version of the draft.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+# Website Concept
 
-To learn more about Next.js, take a look at the following resources:
+## Target Audience
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Traders  
+- Smelters / Refineries  
+- Industrial Investors  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Key Message
+**Reliability + Access to production + Real operational execution**
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Website Structure (One-page landing)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 1. Hero Section
+
+**Objective:** Immediate impact + clear value proposition  
+
+**Headline:**  
+We Help Secure Your Copper and Gold Supply  
+
+**Subheadline:**  
+Reliable sourcing through integrated mining operations, strategic partnerships, and on-the-ground execution across Chile and Argentina.  
+
+**Supporting line:**  
+Production. Trading. Project Development.  
+
+**CTA Buttons:**  
+- Contact Us  
+- Our Operations  
+
+---
+
+## 2. About Us
+
+**Objective:** Build credibility quickly  
+
+We are a Chilean mining company focused on the development and operation of small to mid-scale mining projects, primarily in copper and gold.  
+
+Our business model integrates own production, third-party sourcing, and project development, allowing us to provide consistent and flexible supply solutions to international traders, smelters, and refineries.  
+
+We operate with a strong presence in the Southern Cone of Latin America, combining technical expertise with execution capabilities in complex operating environments.  
+
+---
+
+## 3. What We Do
+
+### Mining Operations
+- Operation of owned mining assets  
+- Processing plants  
+
+### Trading & Supply
+- Sourcing from small-scale producers  
+- Concentrate upgrading  
+- Sales to traders and refineries  
+
+### Project Development
+- Greenfield and brownfield projects  
+- Fast-track execution  
+- Low CAPEX approach  
+
+---
+
+## 4. Operations
+
+### Chile
+**La Isla Copper Project (Valparaíso Region)**  
+- Copper concentrate production (under development)  
+- Integrated concentration plant  
+- Expected output: ~50 tons/month  
+
+### Argentina
+**San Juan Gold Operation**  
+- Active mining and recovery operation  
+- Gold concentrate production  
+- Current output: ~30 tons/month  
+
+---
+
+## 5. Value Proposition
+
+We ensure reliable supply through a combination of:
+
+- Own production  
+- Supplier network  
+- Operational flexibility  
+- Local presence  
+
+👉 This is what a trader buys — not just the mineral, but supply reliability.
+
+---
+
+## 6. Business Model
+
+- Offtake agreements  
+- Supply agreements  
+- Joint ventures  
+- Project development  
+
+---
+
+## 7. Markets
+
+- Europe  
+- Middle East  
+- Latin America  
+
+---
+
+## 8. Advisory Services
+
+We support mining companies, traders, and industrial groups in:
+
+- Evaluating mining opportunities  
+- Securing supply sources  
+- Developing projects from early stage to operation  
+
+---
+
+## 9. Contact
+
+For supply inquiries, partnerships, or project opportunities:
+
+- Email: info@morramining.cl  
+- Alternative: felipe.valenzuela@morramining.cl  
+
+**CTA:**  
+Let’s Secure Your Supply  
+
+---
+
+# Visual Style Recommendations
+
+- **Colors:** Black / Dark Gray / Copper / White  
+- **Images:** Real mining operations, plants, minerals (avoid generic stock)  
+- **Design:** Clean, minimal, spacious, short text  
+
+---
+
+# Strategic Positioning
+
+This site should NOT look like:
+❌ A generic mining company  
+
+It SHOULD look like:
+✅ A reliable supply platform  
+
+---
+
+# Key Positioning Phrases
+
+- Reliable supply from the Southern Cone  
+- Operational execution, not just assets  
+- From mine to market  
+- Securing your metal supply  

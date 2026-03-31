@@ -1,26 +1,121 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* FORGED palette */
+  --color-forged-bg: #1A1A1E;
+  --color-forged-bg2: #2A2A2F;
+  --color-forged-copper: #C17F4E;
+  --color-forged-text: #F0ECE4;
+  --color-forged-muted: #8A8680;
+
+  /* TERRA palette */
+  --color-terra-cream: #F5F0E8;
+  --color-terra-paper: #FEFCF8;
+  --color-terra-copper: #B07A3E;
+  --color-terra-espresso: #2C2419;
+  --color-terra-slate: #6B6259;
+
+  /* VEIN palette */
+  --color-vein-bg: #0D0D0F;
+  --color-vein-bg2: #161618;
+  --color-vein-copper: #E8913A;
+  --color-vein-teal: #2BBCB3;
+  --color-vein-text: #E8E8EC;
+
+  /* Selector */
+  --color-selector-bg: #111113;
+  --color-selector-card: #1C1C20;
+  --color-selector-text: #E0E0E0;
+  --color-selector-muted: #777;
+
+  /* Font families (set per sub-layout) */
+  --font-display: system-ui, sans-serif;
+  --font-body: system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
+
+  /* Animations */
+  --animate-fade-up: fade-up 0.6s ease-out forwards;
+  --animate-fade-in: fade-in 0.5s ease-out forwards;
+  --animate-line-draw: line-draw 1.5s ease-out forwards;
+  --animate-ticker: ticker 30s linear infinite;
+  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+  --animate-slide-up: slide-up 0.7s ease-out forwards;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
+
+@keyframes line-draw {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Utility: hidden until in-view triggers animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.reveal.in-view {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+/* Stagger delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+.stagger-7 { animation-delay: 0.7s; }
+.stagger-8 { animation-delay: 0.8s; }
