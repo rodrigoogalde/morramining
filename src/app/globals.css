@@ -8,27 +8,7 @@
   --color-forged-text: #F0ECE4;
   --color-forged-muted: #8A8680;
 
-  /* TERRA palette */
-  --color-terra-cream: #F5F0E8;
-  --color-terra-paper: #FEFCF8;
-  --color-terra-copper: #B07A3E;
-  --color-terra-espresso: #2C2419;
-  --color-terra-slate: #6B6259;
-
-  /* VEIN palette */
-  --color-vein-bg: #0D0D0F;
-  --color-vein-bg2: #161618;
-  --color-vein-copper: #E8913A;
-  --color-vein-teal: #2BBCB3;
-  --color-vein-text: #E8E8EC;
-
-  /* Selector */
-  --color-selector-bg: #111113;
-  --color-selector-card: #1C1C20;
-  --color-selector-text: #E0E0E0;
-  --color-selector-muted: #777;
-
-  /* Font families (set per sub-layout) */
+/* Font families (set per sub-layout) */
   --font-display: system-ui, sans-serif;
   --font-body: system-ui, sans-serif;
   --font-mono: ui-monospace, monospace;
@@ -37,7 +17,6 @@
   --animate-fade-up: fade-up 0.6s ease-out forwards;
   --animate-fade-in: fade-in 0.5s ease-out forwards;
   --animate-line-draw: line-draw 1.5s ease-out forwards;
-  --animate-ticker: ticker 30s linear infinite;
   --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
   --animate-slide-up: slide-up 0.7s ease-out forwards;
 }
@@ -61,11 +40,6 @@
 @keyframes line-draw {
   from { width: 0%; }
   to { width: 100%; }
-}
-
-@keyframes ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
 }
 
 @keyframes pulse-glow {

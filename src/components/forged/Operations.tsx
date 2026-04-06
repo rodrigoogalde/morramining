@@ -1,9 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { content } from "@/lib/content";
 import { useInView } from "@/hooks/useInView";
 
-const operations = [content.operations.chile, content.operations.argentina];
+const operations = [
+  { ...content.operations.chile, image: "/img/foto-3.jpeg", imageAlt: "Copper processing equipment at La Isla" },
+  { ...content.operations.argentina, image: "/img/foto-mina-pro.png", imageAlt: "Mine entrance at San Juan operation" },
+];
 
 export default function Operations() {
   const [ref, isInView] = useInView(0.1);
@@ -17,18 +21,34 @@ export default function Operations() {
         {content.operations.title}
       </p>
 
+      {/* Map */}
+      <div className={`relative w-full max-w-4xl mx-auto mb-16 forged-reveal ${isInView ? "in-view" : ""}`}>
+        <Image
+          src="/img/mapa-chile-argentina.png"
+          alt="Map showing Morra Mining operations in Chile and Argentina"
+          width={1200}
+          height={800}
+          className="w-full h-auto rounded-lg"
+        />
+      </div>
+
       <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
         {operations.map((op, i) => (
           <div
             key={op.name}
             className={`forged-reveal ${isInView ? "in-view" : ""} forged-reveal-stagger-${i + 1}`}
           >
-            {/* Placeholder image area with gradient + grain */}
-            <div className="relative h-64 bg-gradient-to-br from-forged-bg2 to-forged-bg rounded-lg mb-8 overflow-hidden">
-              <div className="absolute inset-0 opacity-[0.06] bg-[url('data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22200%22%20height=%22200%22%3E%3Cfilter%20id=%22g%22%3E%3CfeTurbulence%20type=%22fractalNoise%22%20baseFrequency=%220.7%22%20numOctaves=%222%22/%3E%3C/filter%3E%3Crect%20width=%22100%25%22%20height=%22100%25%22%20filter=%22url(%23g)%22/%3E%3C/svg%3E')]" />
+            {/* Project image with duotone treatment */}
+            <div className="relative h-64 rounded-lg mb-8 overflow-hidden bg-forged-bg2">
+              <Image
+                src={op.image}
+                alt={op.imageAlt}
+                fill
+                className="object-cover forged-duotone"
+              />
               {/* Country label on image */}
-              <div className="absolute bottom-4 left-4">
-                <span className="font-[var(--font-forged-mono)] text-xs uppercase tracking-[0.2em] text-forged-muted/70">
+              <div className="absolute bottom-4 left-4 z-10">
+                <span className="font-[var(--font-forged-mono)] text-xs uppercase tracking-[0.2em] text-forged-text/80 bg-forged-bg/60 backdrop-blur-sm px-3 py-1">
                   {op.country}
                 </span>
               </div>

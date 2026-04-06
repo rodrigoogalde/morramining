@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { content } from "@/lib/content";
 
 export default function Hero() {
@@ -7,8 +8,22 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center px-8 md:px-16 lg:px-24 overflow-hidden">
+      {/* Background image with duotone treatment */}
+      <div className="absolute inset-0">
+        <Image
+          src="/img/foto-1.png"
+          alt="Mining operations in the Andes"
+          fill
+          className="object-cover forged-duotone opacity-30"
+          priority
+        />
+        {/* Gradient overlay for text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-forged-bg via-forged-bg/85 to-forged-bg/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-forged-bg via-transparent to-forged-bg/60" />
+      </div>
+
       {/* Copper horizontal line at ~60% height */}
-      <div className="absolute left-0 right-0" style={{ top: "60%" }}>
+      <div className="absolute left-0 right-0 z-10" style={{ top: "60%" }}>
         <div className="h-[1px] bg-forged-copper forged-line-draw forged-line-draw-delay" />
       </div>
 

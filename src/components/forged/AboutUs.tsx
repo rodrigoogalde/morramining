@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { content } from "@/lib/content";
 import { useInView } from "@/hooks/useInView";
 
@@ -36,9 +37,23 @@ export default function AboutUs() {
               </p>
             ))}
           </div>
+
+          {/* Inline image with duotone treatment */}
+          <div
+            className={`relative mt-10 h-56 md:h-72 rounded-lg overflow-hidden forged-reveal ${
+              isInView ? "in-view" : ""
+            } forged-reveal-stagger-3`}
+          >
+            <Image
+              src="/img/foto-2.png"
+              alt="Aerial view of mining operations in the Andes mountains"
+              fill
+              className="object-cover forged-duotone"
+            />
+          </div>
         </div>
 
-        {/* Right: Stats */}
+        {/* Right: Stats + mineral image */}
         <div className="lg:col-span-5">
           <div className="grid grid-cols-2 gap-8 lg:gap-12 lg:pt-12">
             {stats.map((stat, i) => (
@@ -54,6 +69,20 @@ export default function AboutUs() {
                 </span>
               </div>
             ))}
+          </div>
+
+          {/* Mineral sample image */}
+          <div
+            className={`relative mt-10 h-48 rounded-lg overflow-hidden forged-reveal ${
+              isInView ? "in-view" : ""
+            } forged-reveal-stagger-6`}
+          >
+            <Image
+              src="/img/foto-4.png"
+              alt="Mineral ore sample from mining operations"
+              fill
+              className="object-cover object-center forged-duotone"
+            />
           </div>
         </div>
       </div>
