@@ -34,7 +34,7 @@ export default function Advisory() {
         </ul>
 
         <p className="font-[var(--font-forged-display)] text-xl md:text-2xl text-forged-text leading-snug max-w-lg">
-          From early-stage evaluation to full operational delivery.
+          {content.advisory.closing}
         </p>
       </div>
     </section>

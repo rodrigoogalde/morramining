@@ -1,24 +1,40 @@
 export const content = {
   company: {
-    name: "Morra Mining",
+    name: "Morra Mining SpA",
     shortName: "MORRA",
+    tagline: "Securing Metal Supply Through Real Operations",
   },
   hero: {
-    headline: "We Help Secure Your Copper and Gold Supply",
+    headline: "Secure Copper and Gold Supply from the Southern Cone",
     subheadline:
       "Reliable sourcing through integrated mining operations, strategic partnerships, and on-the-ground execution across Chile and Argentina.",
-    supporting: "Production. Trading. Project Development.",
+    supporting: "Production. Sourcing. Execution.",
     cta: {
       primary: "Contact Us",
-      secondary: "Our Operations",
+      secondary: "View Operations",
+      tertiary: "Download Investor Sheet",
     },
   },
-  about: {
-    title: "About Us",
+  whyWorkWithUs: {
+    title: "Why Work With Us",
     paragraphs: [
-      "We are a Chilean mining company focused on the development and operation of small to mid-scale mining projects, primarily in copper and gold.",
-      "Our business model integrates own production, third-party sourcing, and project development, allowing us to provide consistent and flexible supply solutions to international traders, smelters, and refineries.",
-      "We operate with a strong presence in the Southern Cone of Latin America, combining technical expertise with execution capabilities in complex operating environments.",
+      "We provide direct access to copper and gold supply through a combination of operational assets and established sourcing networks across the Southern Cone.",
+      "Our approach is built on execution, flexibility, and long-term partnerships.",
+    ],
+    points: [
+      "Proven operations in Chile and Argentina",
+      "Direct access to small and mid-scale producers",
+      "Integrated mining and trading model",
+      "Flexible supply structures",
+      "Execution-focused team",
+    ],
+  },
+  about: {
+    title: "Who We Are",
+    paragraphs: [
+      "Morra Mining SpA is a Chilean mining and trading company focused on the development and operation of small to mid-scale mining projects, primarily in copper and gold.",
+      "Our business integrates own production, third-party sourcing, and project development, allowing us to deliver consistent and scalable supply solutions to international traders, smelters, and refineries.",
+      "We operate with a strong presence in Chile and Argentina, combining technical expertise with on-the-ground execution capabilities.",
     ],
   },
   whatWeDo: {
@@ -26,35 +42,31 @@ export const content = {
     services: [
       {
         label: "Mining Operations",
-        items: ["Operation of owned mining assets", "Processing plants"],
+        description:
+          "We develop and operate mining assets focused on efficient, scalable, and fast-to-market production.",
       },
       {
         label: "Trading & Supply",
-        items: [
-          "Sourcing from small-scale producers",
-          "Concentrate upgrading",
-          "Sales to traders and refineries",
-        ],
+        description:
+          "We source mineral products from a network of producers, upgrade materials when required, and supply directly to international clients.",
       },
       {
         label: "Project Development",
-        items: [
-          "Greenfield and brownfield projects",
-          "Fast-track execution",
-          "Low CAPEX approach",
-        ],
+        description:
+          "We identify, evaluate, and bring mining projects into operation, including both greenfield and brownfield opportunities.",
       },
     ],
   },
   operations: {
-    title: "Operations",
+    title: "Our Operations",
     chile: {
       country: "Chile",
+      flag: "🇨🇱",
       name: "La Isla Copper Project",
-      region: "Valparaiso Region",
+      region: "El Melón, Valparaíso Region",
+      status: "Under Development",
       details: [
-        "Copper concentrate production (under development)",
-        "Integrated concentration plant",
+        "Expected production: ~50 tons/month",
       ],
       output: "~50 tons/month",
       outputNumber: 50,
@@ -62,11 +74,12 @@ export const content = {
     },
     argentina: {
       country: "Argentina",
+      flag: "🇦🇷",
       name: "San Juan Gold Operation",
       region: "San Juan Province",
+      status: "Operating",
       details: [
-        "Active mining and recovery operation",
-        "Gold concentrate production",
+        "Current production: ~30 tons/month",
       ],
       output: "~30 tons/month",
       outputNumber: 30,
@@ -74,27 +87,28 @@ export const content = {
     },
   },
   valueProposition: {
-    title: "Value Proposition",
+    title: "Reliable Supply, Built on Real Capacity",
     statement:
-      "We ensure reliable supply through a combination of own production, supplier network, operational flexibility, and local presence.",
-    tagline:
-      "This is what a trader buys — not just the mineral, but supply reliability.",
+      "We ensure reliable and scalable metal supply through a combination of:",
     items: [
-      "Own production",
-      "Supplier network",
-      "Operational flexibility",
-      "Local presence",
+      "Own mining production",
+      "Established supplier network",
+      "On-site operational execution",
+      "Flexible commercial structures",
     ],
+    closing:
+      "Our model reduces supply risk and ensures continuity for our partners.",
   },
   businessModel: {
-    title: "Business Model",
+    title: "How We Work",
+    statement: "We structure our partnerships through:",
     items: [
       {
         label: "Offtake Agreements",
         description: "Securing long-term supply commitments",
       },
       {
-        label: "Supply Agreements",
+        label: "Long-term Supply Contracts",
         description: "Flexible sourcing arrangements",
       },
       {
@@ -102,17 +116,22 @@ export const content = {
         description: "Strategic operational partnerships",
       },
       {
-        label: "Project Development",
+        label: "Strategic Project Development",
         description: "From greenfield to production",
       },
     ],
+    closing:
+      "We align our operations with our partners' supply requirements to ensure long-term reliability.",
   },
   markets: {
-    title: "Markets",
+    title: "Markets We Serve",
+    statement:
+      "We supply copper and gold concentrates to international markets, including:",
     regions: [
       {
         name: "Europe",
-        description: "Established trading relationships with European smelters and refineries",
+        description:
+          "Established trading relationships with European smelters and refineries",
       },
       {
         name: "Middle East",
@@ -123,9 +142,11 @@ export const content = {
         description: "Regional trading networks across the Southern Cone",
       },
     ],
+    closing:
+      "Our clients include commodity traders, smelters, and refining companies seeking secure and diversified sourcing.",
   },
   advisory: {
-    title: "Advisory Services",
+    title: "Advisory & Project Support",
     description:
       "We support mining companies, traders, and industrial groups in:",
     services: [
@@ -133,9 +154,15 @@ export const content = {
       "Securing supply sources",
       "Developing projects from early stage to operation",
     ],
+    closing:
+      "Our strength lies in combining technical expertise with commercial execution.",
+  },
+  strategicPositioning: {
+    headline: "From Mine to Market",
+    text: "We combine production, sourcing, and execution to deliver reliable copper and gold supply across the Southern Cone.",
   },
   contact: {
-    title: "Contact",
+    title: "Contact Us",
     description:
       "For supply inquiries, partnerships, or project opportunities:",
     emails: {
@@ -149,13 +176,5 @@ export const content = {
     monthlyCapacity: 80,
     marketsServed: 3,
     activeProjects: 2,
-  },
-  positioning: {
-    phrases: [
-      "Reliable supply from the Southern Cone",
-      "Operational execution, not just assets",
-      "From mine to market",
-      "Securing your metal supply",
-    ],
   },
 };

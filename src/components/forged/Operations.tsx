@@ -49,7 +49,7 @@ export default function Operations() {
               {/* Country label on image */}
               <div className="absolute bottom-4 left-4 z-10">
                 <span className="font-[var(--font-forged-mono)] text-xs uppercase tracking-[0.2em] text-forged-text/80 bg-forged-bg/60 backdrop-blur-sm px-3 py-1">
-                  {op.country}
+                  {op.flag} {op.country}
                 </span>
               </div>
             </div>
@@ -59,9 +59,21 @@ export default function Operations() {
               {op.name}
             </h3>
 
-            <p className="font-[var(--font-forged-mono)] text-sm text-forged-muted mb-4">
+            <p className="font-[var(--font-forged-mono)] text-sm text-forged-muted mb-2">
               {op.region}
             </p>
+
+            {/* Status badge */}
+            <div className="flex items-center gap-2 mb-4">
+              <span
+                className={`w-2 h-2 rounded-full ${
+                  op.status === "Operating" ? "bg-green-500 animate-pulse-glow" : "bg-forged-copper"
+                }`}
+              />
+              <span className="font-[var(--font-forged-mono)] text-xs uppercase tracking-[0.15em] text-forged-muted">
+                {op.status}
+              </span>
+            </div>
 
             <div className="space-y-2 mb-6">
               {op.details.map((detail) => (

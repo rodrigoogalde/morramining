@@ -71,6 +71,12 @@ export default function Hero() {
           >
             {content.hero.cta.secondary}
           </a>
+          <a
+            href="#"
+            className="inline-flex items-center justify-center px-8 py-3.5 border border-forged-muted/30 text-forged-muted font-[var(--font-forged-body)] font-medium text-sm uppercase tracking-[0.15em] hover:border-forged-copper/50 hover:text-forged-copper transition-colors duration-300"
+          >
+            {content.hero.cta.tertiary}
+          </a>
         </div>
       </div>
     </section>

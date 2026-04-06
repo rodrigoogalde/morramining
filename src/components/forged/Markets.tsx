@@ -8,11 +8,15 @@ export default function Markets() {
 
   return (
     <section ref={ref} className="px-8 md:px-16 lg:px-24 py-24 md:py-32">
-      <p className="font-[var(--font-forged-mono)] uppercase tracking-[0.3em] text-xs text-forged-copper mb-12">
+      <p className="font-[var(--font-forged-mono)] uppercase tracking-[0.3em] text-xs text-forged-copper mb-6">
         {content.markets.title}
       </p>
 
-      <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+      <p className="font-[var(--font-forged-body)] text-lg text-forged-muted leading-relaxed mb-12 max-w-2xl">
+        {content.markets.statement}
+      </p>
+
+      <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-12">
         {content.markets.regions.map((region, i) => (
           <div
             key={region.name}
@@ -31,6 +35,14 @@ export default function Markets() {
           </div>
         ))}
       </div>
+
+      <p
+        className={`font-[var(--font-forged-body)] text-forged-text/80 leading-relaxed max-w-2xl forged-reveal ${
+          isInView ? "in-view" : ""
+        } forged-reveal-stagger-4`}
+      >
+        {content.markets.closing}
+      </p>
     </section>
   );
 }

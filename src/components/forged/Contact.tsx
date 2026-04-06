@@ -15,6 +15,10 @@ export default function Contact() {
       <div
         className={`max-w-2xl mx-auto forged-reveal ${isInView ? "in-view" : ""}`}
       >
+        <p className="font-[var(--font-forged-mono)] uppercase tracking-[0.3em] text-xs text-forged-copper mb-8">
+          {content.contact.title}
+        </p>
+
         <h2 className="font-[var(--font-forged-display)] text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-8">
           {content.contact.cta}
         </h2>

@@ -13,13 +13,18 @@ export default function ValueProposition() {
           isInView ? "in-view" : ""
         }`}
       >
-        {/* Tagline */}
-        <blockquote className="font-[var(--font-forged-display)] text-3xl md:text-4xl lg:text-5xl leading-[1.15] mb-12 text-forged-text">
-          {content.valueProposition.tagline}
+        {/* Title */}
+        <blockquote className="font-[var(--font-forged-display)] text-3xl md:text-4xl lg:text-5xl leading-[1.15] mb-8 text-forged-text">
+          {content.valueProposition.title}
         </blockquote>
 
+        {/* Statement */}
+        <p className="font-[var(--font-forged-body)] text-lg text-forged-muted leading-relaxed mb-10">
+          {content.valueProposition.statement}
+        </p>
+
         {/* Items row with copper separators */}
-        <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2">
+        <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 mb-10">
           {content.valueProposition.items.map((item, i) => (
             <span key={item} className="flex items-center gap-2">
               {i > 0 && (
@@ -33,6 +38,11 @@ export default function ValueProposition() {
             </span>
           ))}
         </div>
+
+        {/* Closing */}
+        <p className="font-[var(--font-forged-body)] text-forged-text/80 leading-relaxed max-w-2xl mx-auto">
+          {content.valueProposition.closing}
+        </p>
       </div>
     </section>
   );

@@ -23,17 +23,9 @@ export default function WhatWeDo() {
             <h3 className="font-[var(--font-forged-display)] text-2xl md:text-3xl mb-6 text-forged-text">
               {service.label}
             </h3>
-            <ul className="space-y-3">
-              {service.items.map((item) => (
-                <li
-                  key={item}
-                  className="font-[var(--font-forged-body)] text-forged-muted leading-relaxed flex items-start gap-3"
-                >
-                  <span className="w-1 h-1 rounded-full bg-forged-copper mt-2.5 shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
+            <p className="font-[var(--font-forged-body)] text-forged-muted leading-relaxed">
+              {service.description}
+            </p>
           </div>
         ))}
       </div>
