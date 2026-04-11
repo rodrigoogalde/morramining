@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { content } from "@/lib/content";
 import { useInView } from "@/hooks/useInView";
 
@@ -7,9 +8,20 @@ export default function StrategicPositioning() {
   const [ref, isInView] = useInView(0.1);
 
   return (
-    <section ref={ref} className="py-32 md:py-40 px-8 md:px-16 lg:px-24">
+    <section ref={ref} className="relative py-32 md:py-40 px-8 md:px-16 lg:px-24 overflow-hidden">
+      {/* Background image with duotone treatment */}
+      <div className="absolute inset-0">
+        <Image
+          src="/img/san-juan-sunset.jpeg"
+          alt="Desert landscape at sunset"
+          fill
+          className="object-cover forged-duotone opacity-15"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-forged-bg via-forged-bg/80 to-forged-bg" />
+      </div>
+
       <div
-        className={`max-w-4xl mx-auto text-center forged-reveal ${
+        className={`relative z-10 max-w-4xl mx-auto text-center forged-reveal ${
           isInView ? "in-view" : ""
         }`}
       >

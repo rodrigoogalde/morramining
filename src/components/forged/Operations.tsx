@@ -5,8 +5,8 @@ import { content } from "@/lib/content";
 import { useInView } from "@/hooks/useInView";
 
 const operations = [
-  { ...content.operations.chile, image: "/img/foto-3.jpeg", imageAlt: "Copper processing equipment at La Isla" },
-  { ...content.operations.argentina, image: "/img/foto-mina-pro.png", imageAlt: "Mine entrance at San Juan operation" },
+  { ...content.operations.chile, image: "/img/la-isla-ore-pile.png", imageAlt: "Ore deposit at La Isla copper project" },
+  { ...content.operations.argentina, image: "/img/san-juan-truck-site.png", imageAlt: "San Juan gold operation site in the Argentine desert" },
 ];
 
 export default function Operations() {
@@ -24,7 +24,7 @@ export default function Operations() {
       {/* Map */}
       <div className={`relative w-full max-w-4xl mx-auto mb-16 forged-reveal ${isInView ? "in-view" : ""}`}>
         <Image
-          src="/img/mapa-chile-argentina.png"
+          src="/img/map-operations.png"
           alt="Map showing Morra Mining operations in Chile and Argentina"
           width={1200}
           height={800}

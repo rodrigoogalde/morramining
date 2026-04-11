@@ -16,22 +16,18 @@ export default function Markets() {
         {content.markets.statement}
       </p>
 
-      <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-12">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 mb-12">
         {content.markets.regions.map((region, i) => (
           <div
-            key={region.name}
+            key={region}
             className={`forged-reveal ${isInView ? "in-view" : ""} forged-reveal-stagger-${i + 1}`}
           >
             {/* Pulsing copper dot */}
             <div className="w-2 h-2 bg-forged-copper rounded-full animate-pulse-glow mb-6" />
 
-            <h3 className="font-[var(--font-forged-display)] text-2xl md:text-3xl text-forged-text mb-4">
-              {region.name}
+            <h3 className="font-[var(--font-forged-display)] text-2xl md:text-3xl text-forged-text">
+              {region}
             </h3>
-
-            <p className="font-[var(--font-forged-body)] text-forged-muted leading-relaxed">
-              {region.description}
-            </p>
           </div>
         ))}
       </div>
@@ -39,7 +35,7 @@ export default function Markets() {
       <p
         className={`font-[var(--font-forged-body)] text-forged-text/80 leading-relaxed max-w-2xl forged-reveal ${
           isInView ? "in-view" : ""
-        } forged-reveal-stagger-4`}
+        } forged-reveal-stagger-5`}
       >
         {content.markets.closing}
       </p>

@@ -5,36 +5,26 @@ export const content = {
     tagline: "Securing Metal Supply Through Real Operations",
   },
   hero: {
-    headline: "Secure Copper and Gold Supply from the Southern Cone",
+    headline:
+      "We help you secure your supply of copper and gold from the southern cone of South America.",
     subheadline:
       "Reliable sourcing through integrated mining operations, strategic partnerships, and on-the-ground execution across Chile and Argentina.",
-    supporting: "Production. Sourcing. Execution.",
+    highlights: [
+      "Detailed local knowledge, including mineral resources, relationships with government authorities and communities, and small-scale local copper and gold producers.",
+      "Extensive trading network including traders, refineries, and mining companies in Europe and Asia.",
+    ],
+    supporting: "Production. Trading. Project Development.",
     cta: {
       primary: "Contact Us",
-      secondary: "View Operations",
-      tertiary: "Download Investor Sheet",
+      secondary: "Our Operations",
     },
-  },
-  whyWorkWithUs: {
-    title: "Why Work With Us",
-    paragraphs: [
-      "We provide direct access to copper and gold supply through a combination of operational assets and established sourcing networks across the Southern Cone.",
-      "Our approach is built on execution, flexibility, and long-term partnerships.",
-    ],
-    points: [
-      "Proven operations in Chile and Argentina",
-      "Direct access to small and mid-scale producers",
-      "Integrated mining and trading model",
-      "Flexible supply structures",
-      "Execution-focused team",
-    ],
   },
   about: {
     title: "Who We Are",
     paragraphs: [
-      "Morra Mining SpA is a Chilean mining and trading company focused on the development and operation of small to mid-scale mining projects, primarily in copper and gold.",
-      "Our business integrates own production, third-party sourcing, and project development, allowing us to deliver consistent and scalable supply solutions to international traders, smelters, and refineries.",
-      "We operate with a strong presence in Chile and Argentina, combining technical expertise with on-the-ground execution capabilities.",
+      "We are a Chilean mining company focused on the development and operation of small to mid-scale mining projects, primarily in copper and gold.",
+      "Our business model integrates own production, third-party sourcing, and project development, allowing us to provide consistent and flexible supply solutions to international traders, smelters, and refineries.",
+      "We operate with a strong presence in the Southern Cone of Latin America, combining technical expertise with execution capabilities in complex operating environments.",
     ],
   },
   whatWeDo: {
@@ -43,17 +33,17 @@ export const content = {
       {
         label: "Mining Operations",
         description:
-          "We develop and operate mining assets focused on efficient, scalable, and fast-to-market production.",
+          "We develop and operate mining assets in Chile and Argentina, focusing on small, efficient, scalable, low-investment, and rapidly deployable mining projects.",
       },
       {
-        label: "Trading & Supply",
+        label: "Marketing and Supply",
         description:
-          "We source mineral products from a network of producers, upgrade materials when required, and supply directly to international clients.",
+          "We source mineral products, such as gold, copper, and silver concentrates, high-gold sands, high-copper sands, and precious metals, from a network of small and medium-sized producers. We upgrade and refine the material when necessary and supply it to international clients.",
       },
       {
         label: "Project Development",
         description:
-          "We identify, evaluate, and bring mining projects into operation, including both greenfield and brownfield opportunities.",
+          "We identify, evaluate, and launch small, low-investment, and rapidly deployable mining projects, primarily in previously mined deposits or deposits with a promising history.",
       },
     ],
   },
@@ -61,12 +51,15 @@ export const content = {
     title: "Our Operations",
     chile: {
       country: "Chile",
-      flag: "🇨🇱",
+      flag: "\u{1F1E8}\u{1F1F1}",
       name: "La Isla Copper Project",
       region: "El Melón, Valparaíso Region",
       status: "Under Development",
       details: [
-        "Expected production: ~50 tons/month",
+        "High-potential mining deposit with copper sulfide ore and some silver",
+        "Copper concentrate production (under development)",
+        "Mineral processing at a supplier's plant, on a contract basis",
+        "Expected production: ~50 tons/month of copper concentrate",
       ],
       output: "~50 tons/month",
       outputNumber: 50,
@@ -74,12 +67,16 @@ export const content = {
     },
     argentina: {
       country: "Argentina",
-      flag: "🇦🇷",
+      flag: "\u{1F1E6}\u{1F1F7}",
       name: "San Juan Gold Operation",
       region: "San Juan Province",
       status: "Operating",
       details: [
-        "Current production: ~30 tons/month",
+        "The Luis Primera a la Quita mine is a deposit containing 25,000 ounces of gold, based on quartz",
+        "Active extraction and recovery operation",
+        "Pilot mineral processing plant, located in the La Chimba Industrial Park, San Juan, Argentina",
+        "Gold concentrate production",
+        "Current production: ~30 tons/month of gold concentrate",
       ],
       output: "~30 tons/month",
       outputNumber: 30,
@@ -87,63 +84,39 @@ export const content = {
     },
   },
   valueProposition: {
-    title: "Reliable Supply, Built on Real Capacity",
+    title: "Our Value Proposition",
     statement:
-      "We ensure reliable and scalable metal supply through a combination of:",
+      "We offer a reliable and scalable metal supply through a combination of:",
     items: [
-      "Own mining production",
-      "Established supplier network",
-      "On-site operational execution",
-      "Flexible commercial structures",
+      "Our own mining production",
+      "A consolidated supplier network",
+      "Local knowledge of mining projects, government authorities, and communities",
+      "A team of outstanding professionals",
+      "On-site operational capabilities to bring low-investment, rapidly implemented mining projects into operation, focusing on copper and gold",
+      "Streamlined commercial structures with traders, refineries, and mining companies in Asia, the Middle East, and Europe",
     ],
     closing:
-      "Our model reduces supply risk and ensures continuity for our partners.",
+      "Our approach allows us to reduce supply risk and ensure continuity of supply for our partners.",
   },
   businessModel: {
     title: "How We Work",
-    statement: "We structure our partnerships through:",
+    statement: "We engage with our partners through:",
     items: [
-      {
-        label: "Offtake Agreements",
-        description: "Securing long-term supply commitments",
-      },
-      {
-        label: "Long-term Supply Contracts",
-        description: "Flexible sourcing arrangements",
-      },
-      {
-        label: "Joint Ventures",
-        description: "Strategic operational partnerships",
-      },
-      {
-        label: "Strategic Project Development",
-        description: "From greenfield to production",
-      },
+      "Offtake agreements",
+      "Long-term supply contracts",
+      "Strategic partnerships",
+      "Joint ventures",
+      "Project development mandates",
     ],
     closing:
-      "We align our operations with our partners' supply requirements to ensure long-term reliability.",
+      "We align incentives with our clients to ensure long-term, stable supply relationships.",
   },
   markets: {
     title: "Markets We Serve",
-    statement:
-      "We supply copper and gold concentrates to international markets, including:",
-    regions: [
-      {
-        name: "Europe",
-        description:
-          "Established trading relationships with European smelters and refineries",
-      },
-      {
-        name: "Middle East",
-        description: "Growing demand for copper and gold concentrates",
-      },
-      {
-        name: "Latin America",
-        description: "Regional trading networks across the Southern Cone",
-      },
-    ],
+    statement: "We supply mineral products and refined materials to:",
+    regions: ["Asia", "Europe", "Middle East", "Latin America"],
     closing:
-      "Our clients include commodity traders, smelters, and refining companies seeking secure and diversified sourcing.",
+      "Our clients include commodity traders, smelters, refining companies and mining companies seeking to diversify and secure their sourcing.",
   },
   advisory: {
     title: "Advisory & Project Support",
@@ -155,26 +128,25 @@ export const content = {
       "Developing projects from early stage to operation",
     ],
     closing:
-      "Our strength lies in combining technical expertise with commercial execution.",
+      "Our strength lies in combining technical mining expertise with local knowledge in terms of projects, management of legislation, knowledge of communities, and commercial execution.",
   },
   strategicPositioning: {
-    headline: "From Mine to Market",
-    text: "We combine production, sourcing, and execution to deliver reliable copper and gold supply across the Southern Cone.",
+    headline: "Secure Your Supply with a Reliable Partner",
+    text: "From mine to market, we deliver operational execution and dependable supply solutions across the Southern Cone.",
   },
   contact: {
     title: "Contact Us",
     description:
-      "For supply inquiries, partnerships, or project opportunities:",
-    emails: {
-      primary: "info@morramining.cl",
-      secondary: "felipe.valenzuela@morramining.cl",
-    },
+      "For supply inquiries, partnerships, or project opportunities, please contact us:",
+    email: "info@morramining.cl",
+    address:
+      "Alonso de Cordoba 5151, office 402. Las Condes. Santiago de Chile.",
     cta: "Let's Secure Your Supply",
   },
   stats: {
     yearsActive: 5,
     monthlyCapacity: 80,
-    marketsServed: 3,
+    marketsServed: 4,
     activeProjects: 2,
   },
 };

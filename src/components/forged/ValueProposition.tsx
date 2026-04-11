@@ -9,38 +9,39 @@ export default function ValueProposition() {
   return (
     <section ref={ref} className="py-32 md:py-40 px-8 md:px-16 lg:px-24">
       <div
-        className={`max-w-4xl mx-auto text-center forged-reveal ${
+        className={`max-w-4xl mx-auto forged-reveal ${
           isInView ? "in-view" : ""
         }`}
       >
         {/* Title */}
-        <blockquote className="font-[var(--font-forged-display)] text-3xl md:text-4xl lg:text-5xl leading-[1.15] mb-8 text-forged-text">
+        <blockquote className="font-[var(--font-forged-display)] text-3xl md:text-4xl lg:text-5xl leading-[1.15] mb-8 text-forged-text text-center">
           {content.valueProposition.title}
         </blockquote>
 
         {/* Statement */}
-        <p className="font-[var(--font-forged-body)] text-lg text-forged-muted leading-relaxed mb-10">
+        <p className="font-[var(--font-forged-body)] text-lg text-forged-muted leading-relaxed mb-10 text-center">
           {content.valueProposition.statement}
         </p>
 
-        {/* Items row with copper separators */}
-        <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 mb-10">
+        {/* Items as a vertical list */}
+        <div className="space-y-4 mb-10 max-w-3xl mx-auto">
           {content.valueProposition.items.map((item, i) => (
-            <span key={item} className="flex items-center gap-2">
-              {i > 0 && (
-                <span className="font-[var(--font-forged-body)] text-forged-copper select-none">
-                  &mdash;
-                </span>
-              )}
-              <span className="font-[var(--font-forged-mono)] text-sm text-forged-muted uppercase tracking-[0.15em]">
+            <div
+              key={item}
+              className={`flex items-start gap-4 forged-reveal ${
+                isInView ? "in-view" : ""
+              } forged-reveal-stagger-${i + 1}`}
+            >
+              <span className="w-2 h-2 bg-forged-copper rounded-full mt-2 shrink-0" />
+              <span className="font-[var(--font-forged-body)] text-forged-muted leading-relaxed">
                 {item}
               </span>
-            </span>
+            </div>
           ))}
         </div>
 
         {/* Closing */}
-        <p className="font-[var(--font-forged-body)] text-forged-text/80 leading-relaxed max-w-2xl mx-auto">
+        <p className="font-[var(--font-forged-body)] text-forged-text/80 leading-relaxed max-w-2xl mx-auto text-center">
           {content.valueProposition.closing}
         </p>
       </div>

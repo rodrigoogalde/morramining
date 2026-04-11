@@ -45,8 +45,8 @@ export default function AboutUs() {
             } forged-reveal-stagger-3`}
           >
             <Image
-              src="/img/foto-2.png"
-              alt="Aerial view of mining operations in the Andes mountains"
+              src="/img/active-mining-site.jpeg"
+              alt="Active mining operations with equipment and workers"
               fill
               className="object-cover forged-duotone"
             />
@@ -78,8 +78,8 @@ export default function AboutUs() {
             } forged-reveal-stagger-6`}
           >
             <Image
-              src="/img/foto-4.png"
-              alt="Mineral ore sample from mining operations"
+              src="/img/core-samples.png"
+              alt="Labeled drill core mineral samples"
               fill
               className="object-cover object-center forged-duotone"
             />

@@ -1,6 +1,5 @@
 import Navbar from "@/components/forged/Navbar";
 import Hero from "@/components/forged/Hero";
-import WhyWorkWithUs from "@/components/forged/WhyWorkWithUs";
 import AboutUs from "@/components/forged/AboutUs";
 import WhatWeDo from "@/components/forged/WhatWeDo";
 import Operations from "@/components/forged/Operations";
@@ -17,7 +16,6 @@ export default function HomePage() {
     <main className="forged-grain">
       <Navbar />
       <Hero />
-      <WhyWorkWithUs />
       <AboutUs />
       <WhatWeDo />
       <Operations />
