@@ -1,9 +1,10 @@
 "use client";
 
-import { content } from "@/lib/content";
+import { useContent } from "@/lib/language-context";
 import { useInView } from "@/hooks/useInView";
 
 export default function ValueProposition() {
+  const content = useContent();
   const [ref, isInView] = useInView(0.1);
 
   return (

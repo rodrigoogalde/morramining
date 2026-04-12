@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { instrumentSerif, dmSans, dmMono } from "@/lib/fonts";
+import { LanguageProvider } from "@/lib/language-context";
 import "./globals.css";
 import "./forged.css";
 
@@ -15,11 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <body
         className={`${instrumentSerif.variable} ${dmSans.variable} ${dmMono.variable} bg-forged-bg text-forged-text min-h-full flex flex-col`}
       >
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

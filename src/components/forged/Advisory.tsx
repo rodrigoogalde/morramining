@@ -1,9 +1,10 @@
 "use client";
 
-import { content } from "@/lib/content";
+import { useContent } from "@/lib/language-context";
 import { useInView } from "@/hooks/useInView";
 
 export default function Advisory() {
+  const content = useContent();
   const [ref, isInView] = useInView(0.1);
 
   return (
@@ -13,7 +14,7 @@ export default function Advisory() {
           isInView ? "in-view" : ""
         }`}
       >
-        <p className="font-[var(--font-forged-mono)] uppercase tracking-[0.3em] text-xs text-forged-copper mb-8">
+        <p className="font-[var(--font-forged-mono)] uppercase tracking-[0.2em] text-sm md:text-base font-medium text-forged-copper mb-8">
           {content.advisory.title}
         </p>
 

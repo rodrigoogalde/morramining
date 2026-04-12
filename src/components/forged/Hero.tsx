@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { content } from "@/lib/content";
+import { useContent } from "@/lib/language-context";
 
 export default function Hero() {
+  const content = useContent();
   const words = content.hero.headline.split(" ");
 
   return (
@@ -53,7 +54,7 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-5xl">
         {/* Subheadline */}
-        <p className="font-[var(--font-forged-body)] text-forged-muted text-base md:text-lg max-w-xl leading-relaxed mb-4">
+        <p className="font-[var(--font-forged-body)] text-forged-text/80 text-base md:text-lg max-w-xl leading-relaxed mb-4">
           {content.hero.subheadline}
         </p>
 
@@ -61,7 +62,7 @@ export default function Hero() {
         {content.hero.highlights.map((highlight, i) => (
           <p
             key={i}
-            className="font-[var(--font-forged-body)] text-forged-muted/70 text-sm md:text-base max-w-xl leading-relaxed mb-3"
+            className="font-[var(--font-forged-body)] text-forged-text/80 text-sm md:text-base max-w-xl leading-relaxed mb-3"
           >
             {highlight}
           </p>

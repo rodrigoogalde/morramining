@@ -1,18 +1,19 @@
 "use client";
 
 import Image from "next/image";
-import { content } from "@/lib/content";
+import { useContent } from "@/lib/language-context";
 import { useInView } from "@/hooks/useInView";
 
-const stats = [
-  { value: content.stats.yearsActive, label: "Years Active" },
-  { value: content.stats.monthlyCapacity, label: "Tons / Month" },
-  { value: content.stats.marketsServed, label: "Markets Served" },
-  { value: content.stats.activeProjects, label: "Active Projects" },
-];
-
 export default function AboutUs() {
+  const content = useContent();
   const [ref, isInView] = useInView(0.1);
+
+  const stats = [
+    { value: content.stats.yearsActive, label: content.stats.yearsLabel },
+    { value: content.stats.monthlyCapacity, label: content.stats.capacityLabel },
+    { value: content.stats.marketsServed, label: content.stats.marketsLabel },
+    { value: content.stats.activeProjects, label: content.stats.projectsLabel },
+  ];
 
   return (
     <section id="about" ref={ref} className="px-8 md:px-16 lg:px-24 py-24 md:py-32">
@@ -22,7 +23,7 @@ export default function AboutUs() {
       <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
         {/* Left: Text content */}
         <div className="lg:col-span-7">
-          <p className="font-[var(--font-forged-mono)] uppercase tracking-[0.3em] text-xs text-forged-copper mb-8">
+          <p className="font-[var(--font-forged-mono)] uppercase tracking-[0.2em] text-sm md:text-base font-medium text-forged-copper mb-8">
             {content.about.title}
           </p>
           <div className="space-y-6">

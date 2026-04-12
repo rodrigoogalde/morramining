@@ -1,23 +1,29 @@
 "use client";
 
 import Image from "next/image";
-import { content } from "@/lib/content";
+import { useContent } from "@/lib/language-context";
 import { useInView } from "@/hooks/useInView";
 
-const operations = [
-  { ...content.operations.chile, image: "/img/la-isla-ore-pile.png", imageAlt: "Ore deposit at La Isla copper project" },
-  { ...content.operations.argentina, image: "/img/san-juan-truck-site.png", imageAlt: "San Juan gold operation site in the Argentine desert" },
+const operationImages = [
+  { image: "/img/la-isla-ore-pile.png", imageAlt: "Ore deposit at La Isla copper project" },
+  { image: "/img/san-juan-truck-site.png", imageAlt: "San Juan gold operation site in the Argentine desert" },
 ];
 
 export default function Operations() {
+  const content = useContent();
   const [ref, isInView] = useInView(0.1);
+
+  const operations = [
+    { ...content.operations.chile, ...operationImages[0] },
+    { ...content.operations.argentina, ...operationImages[1] },
+  ];
 
   return (
     <section id="operations" ref={ref} className="px-8 md:px-16 lg:px-24 py-24 md:py-32">
       {/* Copper rule */}
       <div className="h-[1px] bg-forged-copper mb-16" />
 
-      <p className="font-[var(--font-forged-mono)] uppercase tracking-[0.3em] text-xs text-forged-copper mb-12">
+      <p className="font-[var(--font-forged-mono)] uppercase tracking-[0.2em] text-sm md:text-base font-medium text-forged-copper mb-12">
         {content.operations.title}
       </p>
 
@@ -79,7 +85,7 @@ export default function Operations() {
               {op.details.map((detail) => (
                 <p
                   key={detail}
-                  className="font-[var(--font-forged-body)] text-forged-muted/80 leading-relaxed"
+                  className="font-[var(--font-forged-body)] text-forged-text leading-relaxed"
                 >
                   {detail}
                 </p>

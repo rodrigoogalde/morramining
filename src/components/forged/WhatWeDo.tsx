@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { content } from "@/lib/content";
+import { useContent } from "@/lib/language-context";
 import { useInView } from "@/hooks/useInView";
 
 const serviceImages = [
@@ -11,11 +11,12 @@ const serviceImages = [
 ];
 
 export default function WhatWeDo() {
+  const content = useContent();
   const [ref, isInView] = useInView(0.1);
 
   return (
     <section ref={ref} className="px-8 md:px-16 lg:px-24 py-24 md:py-32">
-      <p className="font-[var(--font-forged-mono)] uppercase tracking-[0.3em] text-xs text-forged-copper mb-12">
+      <p className="font-[var(--font-forged-mono)] uppercase tracking-[0.2em] text-sm md:text-base font-medium text-forged-copper mb-12">
         {content.whatWeDo.title}
       </p>
 

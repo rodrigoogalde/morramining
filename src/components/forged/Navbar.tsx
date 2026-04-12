@@ -1,16 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { content } from "@/lib/content";
-
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Operations", href: "#operations" },
-  { label: "Contact", href: "#contact" },
-];
+import { Globe } from "lucide-react";
+import { useContent, useLanguage } from "@/lib/language-context";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const content = useContent();
+  const { language, toggleLanguage } = useLanguage();
+
+  const navLinks = [
+    { label: content.nav.about, href: "#about" },
+    { label: content.nav.operations, href: "#operations" },
+    { label: content.nav.contact, href: "#contact" },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -29,22 +32,36 @@ export default function Navbar() {
         {/* Logo */}
         <a
           href="#"
-          className="font-[var(--font-forged-body)] text-sm font-medium uppercase tracking-[0.2em] text-forged-text hover:text-forged-copper transition-colors duration-300"
+          className="font-[var(--font-forged-body)] text-base md:text-lg font-medium uppercase tracking-[0.25em] text-forged-text hover:text-forged-copper transition-colors duration-300"
         >
           {content.company.name.toUpperCase()}
         </a>
 
-        {/* Links */}
-        <div className="hidden md:flex items-center gap-10">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="forged-underline font-[var(--font-forged-body)] text-sm text-forged-muted hover:text-forged-text transition-colors duration-300 uppercase tracking-[0.15em]"
-            >
-              {link.label}
-            </a>
-          ))}
+        {/* Links + Language Toggle */}
+        <div className="flex items-center gap-6 md:gap-10">
+          <div className="hidden md:flex items-center gap-10">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="forged-underline font-[var(--font-forged-body)] text-sm text-forged-muted hover:text-forged-text transition-colors duration-300 uppercase tracking-[0.15em]"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+
+          {/* Language toggle */}
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-2 text-forged-muted hover:text-forged-copper transition-colors duration-300"
+            aria-label="Toggle language"
+          >
+            <Globe size={18} strokeWidth={1.5} />
+            <span className="font-[var(--font-forged-mono)] text-xs uppercase tracking-[0.15em]">
+              {language === "en" ? "EN" : "中文"}
+            </span>
+          </button>
         </div>
       </div>
     </nav>

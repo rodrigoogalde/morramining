@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { content } from "@/lib/content";
+import { useContent } from "@/lib/language-context";
 import { useInView } from "@/hooks/useInView";
 
 export default function StrategicPositioning() {
+  const content = useContent();
   const [ref, isInView] = useInView(0.1);
 
   return (
