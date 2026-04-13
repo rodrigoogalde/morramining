@@ -37,7 +37,7 @@ export default function Navbar() {
             alt="Morra Mining"
             width={468}
             height={317}
-            className="h-16 md:h-20 w-auto navbar-logo"
+            className="h-24 md:h-32 w-auto navbar-logo"
             priority
           />
         </a>
@@ -64,7 +64,7 @@ export default function Navbar() {
           >
             <Globe size={18} strokeWidth={1.5} />
             <span className="font-[var(--font-forged-mono)] text-xs uppercase tracking-[0.15em]">
-              {language === "en" ? "EN" : "中文"}
+              {language === "en" ? "CHI" : "ENG"}
             </span>
           </button>
         </div>

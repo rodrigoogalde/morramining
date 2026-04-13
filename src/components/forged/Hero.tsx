@@ -8,7 +8,7 @@ export default function Hero() {
   const words = content.hero.headline.split(" ");
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center pt-28 pb-16 px-8 md:px-16 lg:px-24 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center pt-44 md:pt-48 pb-16 px-8 md:px-16 lg:px-24 overflow-hidden">
       {/* Background image with duotone treatment */}
       <div className="absolute inset-0">
         <Image
