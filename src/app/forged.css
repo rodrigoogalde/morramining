@@ -122,3 +122,14 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
+
+/* ── Logo Filters ── */
+.navbar-logo {
+  filter: brightness(1.15);
+}
+
+
+.footer-logo {
+  filter: brightness(0) invert(1) sepia(1) saturate(1.5) hue-rotate(345deg) brightness(0.7);
+  opacity: 0.6;
+}

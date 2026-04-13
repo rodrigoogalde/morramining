@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { Globe } from "lucide-react";
 import { useContent, useLanguage } from "@/lib/language-context";
 
@@ -30,11 +31,15 @@ export default function Navbar() {
     >
       <div className="flex items-center justify-between px-8 md:px-16 lg:px-24 py-5">
         {/* Logo */}
-        <a
-          href="#"
-          className="font-[var(--font-forged-body)] text-base md:text-lg font-medium uppercase tracking-[0.25em] text-forged-text hover:text-forged-copper transition-colors duration-300"
-        >
-          {content.company.name.toUpperCase()}
+        <a href="#" className="group relative block">
+          <Image
+            src="/logo.png"
+            alt="Morra Mining"
+            width={468}
+            height={317}
+            className="h-16 md:h-20 w-auto navbar-logo"
+            priority
+          />
         </a>
 
         {/* Links + Language Toggle */}
