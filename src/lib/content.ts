@@ -60,7 +60,7 @@ const en = {
       country: "Chile",
       flag: "\u{1F1E8}\u{1F1F1}",
       name: "La Isla Copper Project",
-      region: "El Melón, Valparaíso Region",
+      region: "El Melón, Valparaíso Region, Chile",
       status: "Under Development",
       details: [
         "High-potential mining deposit with copper sulfide ore and some silver",
@@ -76,7 +76,7 @@ const en = {
       country: "Argentina",
       flag: "\u{1F1E6}\u{1F1F7}",
       name: "San Juan Gold Operation",
-      region: "San Juan Province",
+      region: "San Juan Province, Argentina",
       status: "Operating",
       details: [
         "The Luis Primera a la Quita mine is a deposit containing 25,000 ounces of gold, based on quartz",
